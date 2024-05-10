@@ -1,4 +1,7 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,20 +16,26 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title:'space app',
       home:Scaffold(
-        body:Center(
-          child: Container(
-            height: 250,
-            width: 250,
-            decoration: BoxDecoration(
-            borderRadius:BorderRadius.
-            circular(0),
-            color: Colors.red,
+        backgroundColor: Colors.black26,
+        body: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only
+              (top: 400,
+              left: 50),
+              child: Image.asset(
+                "assets/space1.png",
+                 height: 200,
+              ),
             ),
-            child:const Center(child:
-             Text("HELO")),
-          ),
+
+            const SizedBox(
+              height: 50,
+              ),
+            //Image.asset("assets/space2.png")
+          ],
         )
-      )
+      ),
     );
   }
 }
